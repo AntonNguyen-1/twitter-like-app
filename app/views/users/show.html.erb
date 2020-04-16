@@ -22,15 +22,6 @@
         <td><%= link_to 'Follow user', "/users/#{@user.id}/follow", method: :post%></td>
         <td><%= link_to 'Unfollow user', "/users/#{@user[:id]}/unfollow", method: :delete %></td>
     <% end %>
-      <!--        <td><%#= user %></td>-->
-      <!--        <td><%#= user %></td>-->
-      <!--        <td><%#= link_to 'Show', user %></td>-->
-      <!--        <td><%#= link_to 'Edit', edit_user_path(user) %></td>-->
-      <!--        <td><%#= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
     </tr>
   </tbody>
 </table>
-
-
-<!--<%#= link_to 'Edit', edit_tweet_path(@tweet) %> |-->
-<%#= link_to 'Back', tweets_path %>
