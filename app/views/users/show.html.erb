@@ -18,7 +18,7 @@
       <td><%= @user.username %></td>
       <td></td>
       <td><%= @user.following.map { |following| following['email'].split('@')[0].capitalize }.join(' ') %></td>
-      <% if current_user[:id] != @user.id %>
+      <% if current_user && current_user[:id] != @user.id %>
         <td><%= link_to 'Follow user', "/users/#{@user.id}/follow", method: :post%></td>
         <td><%= link_to 'Unfollow user', "/users/#{@user[:id]}/unfollow", method: :delete %></td>
     <% end %>
