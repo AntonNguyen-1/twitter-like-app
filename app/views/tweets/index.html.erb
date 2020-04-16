@@ -20,7 +20,7 @@
         <td><%= tweet.user.username %></td>
         <td><%= tweet.created_at %></td>
         <% if current_user %>
-          <td><%= link_to 'Follow user', tweet %></td>
+          <td><%= link_to 'Follow user', "/users/#{tweet.user.id}/follow", method: :post %></td>
         <% end %>
         <td><%= link_to 'User profile', "/users/#{tweet[:user_id]}" %></td>
       </tr>
