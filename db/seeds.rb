@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times.each do |i|
+  user = User.create!(email: "user-#{i+1}@gmail.com", password: 'user123')
+  Tweet.create!(title: "Tweet title ##{i+1}", body: "Some text suddenly appeared right here", user_id: user[:id])
+end

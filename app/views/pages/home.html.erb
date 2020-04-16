@@ -1,0 +1,14 @@
+<h1>Welcome to the homepage :)</h1>
+
+<%= link_to 'Users', '/users' %>
+<%= link_to 'Tweets', tweets_path %>
+
+<% if current_user %>
+  <%= link_to 'Post new tweet', new_tweet_path %>
+  <br>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<%else %>
+  <br>
+  <%= link_to 'Sign up', new_user_registration_path %>
+  <%= link_to 'Sign in', new_user_session_path %>
+<%end %>
